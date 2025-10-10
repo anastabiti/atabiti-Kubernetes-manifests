@@ -32,5 +32,5 @@ spec:
     - protocol: TCP
       port: 8888
       targetPort: 8888
-      nodePort: 13337
+      nodePort: 32767
   type: NodePort
