@@ -27,7 +27,7 @@ metadata:
   name: atabiti-service
 spec:
   selector:
-    name: atabiti-app
+    app: atabiti-app
   ports:
     - protocol: TCP
       port: 8888
