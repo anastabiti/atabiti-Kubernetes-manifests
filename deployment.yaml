@@ -5,7 +5,7 @@ metadata:
   labels:
     app: atabiti-app
 spec:
-  replicas: 3
+  replicas: 0
   selector:
     matchLabels:
       app: atabiti-app
