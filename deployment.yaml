@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: atabiti-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: atabiti-app
+  template:
+    metadata:
+      labels:
+        app: atabiti-app
+    spec:
+      containers:
+      - name: atabiti-app
+        image: wil42/playground:v1
+        ports:
+        - containerPort: 8888
