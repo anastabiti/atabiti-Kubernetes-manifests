@@ -5,7 +5,7 @@ metadata:
   labels:
     app: atabiti-app
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: atabiti-app
@@ -26,7 +26,7 @@ metadata:
   name: atabiti-service
 spec:
   selector:
-    app.kubernetes.io/name: atabiti-app
+    name: atabiti-app
   ports:
     - protocol: TCP
       port: 8888
