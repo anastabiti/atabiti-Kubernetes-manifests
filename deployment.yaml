@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: atabiti-app
-        image: wil42/playground:v1
+        image: wil42/playground:v2
         ports:
         - containerPort: 8888
 ---
@@ -26,27 +26,15 @@ kind: Service
 metadata:
   name: atabiti-service
   namespace: dev
-# spec:
-#   selector:
-#     app: atabiti-app
-#   ports:
-#     - protocol: TCP
-#       port: 8888
-#       targetPort: 8888
-#       nodePort: 30080
-#   type: NodePort
 spec:
   selector:
     app: atabiti-app
   ports:
-  - name: http
-    port: 80
-    targetPort: 8080
-    nodePort: 30081  
-  - name: https
-    port: 443
-    targetPort: 8080
-    nodePort: 30082
+    - protocol: TCP
+      port: 8888
+      targetPort: 8888
+      nodePort: 30080
+  type: NodePort
 
 # apiVersion: v1
 # kind: Service
