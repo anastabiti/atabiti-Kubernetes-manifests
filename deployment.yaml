@@ -27,7 +27,6 @@ kind: Service
 metadata:
   name: atabiti-service
 spec:
-  type: LoadBalancer
   selector:
     app: atabiti-app
   ports:
