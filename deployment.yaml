@@ -45,8 +45,7 @@ metadata:
   namespace: dev
 spec:
   rules:
-  - host: "43.157.40.141"
-    http:
+  - http:
       paths:
       - pathType: Prefix
         path: "/"
