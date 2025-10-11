@@ -36,22 +36,22 @@ spec:
       targetPort: 8888
   type: ClusterIP
 
----
+# ---
 
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: atabiti-ingress
-  namespace: dev
-spec:
-  rules:
-  - http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: atabiti-service
-            port:
-              number: 8888
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: atabiti-ingress
+#   namespace: dev
+# spec:
+#   rules:
+#   - http:
+#       paths:
+#       - pathType: Prefix
+#         path: "/"
+#         backend:
+#           service:
+#             name: atabiti-service
+#             port:
+#               number: 8888
 
