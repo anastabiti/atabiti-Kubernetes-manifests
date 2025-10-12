@@ -28,6 +28,7 @@ metadata:
   name: atabiti-service
 spec:
   selector:
+    type: NodePort
     app: atabiti-app
   ports:
     - protocol: TCP
