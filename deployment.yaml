@@ -27,12 +27,14 @@ kind: Service
 metadata:
   name: atabiti-service
 spec:
+  type: NodePort
   selector:
     app: atabiti-app
   ports:
     - protocol: TCP
       port: 8888
-      targetPort: 8888
+      targetPort: 
+      nodePort: 30080    # The port exposed on the node
 # ---
 
 # apiVersion: networking.k8s.io/v1
